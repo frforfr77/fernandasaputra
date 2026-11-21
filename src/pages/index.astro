@@ -1,0 +1,50 @@
+
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Skills from "../components/Skills.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
+
+
+---
+
+<Layout
+  title="Portfolio | Personal Developer"
+  description="Portfolio personal developer. Mengenal profil, keahlian, dan proyek yang saya bangun."
+>
+  <Navbar />
+  <main>
+    <Hero />
+    <About />
+    <Skills />
+    <Projects />
+    <Contact />
+  </main>
+
+  <footer class="container footer">
+    <span>© 2026 — Personal Portfolio</span>
+    <span>Dibuat dengan Astro</span>
+    <a href="#">Kembali ke atas ↑</a>
+  </footer>
+</Layout>
+
+<style>
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding-block: 25px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  .footer a:hover { color: var(--accent); }
+</style>
+<script>
+  import "../scripts/scroll-animation";
+</script>

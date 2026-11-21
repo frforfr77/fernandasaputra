@@ -1,0 +1,68 @@
+
+---
+const skills = [
+  { name: "HTML", category: "Markup" },
+  { name: "CSS", category: "Styling" },
+  { name: "JavaScript", category: "Programming" },
+  { name: "TypeScript", category: "Programming" },
+  { name: "Astro", category: "Framework" },
+  { name: "Git & GitHub", category: "Tools" },
+];
+---
+
+<section id="skills" class="section">
+  <div class="container">
+    <p class="section-label">02 / KEAHLIAN</p>
+    <h2 class="section-title">Teknologi yang saya pelajari.</h2>
+
+    <div class="skills-grid">
+      {skills.map((skill, index) => (
+        <div class="skill-card">
+          <span class="number">0{index + 1}</span>
+          <h3>{skill.name}</h3>
+          <span class="category">{skill.category}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-title { margin-top: 22px; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 45px;
+  }
+
+  .skill-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 25px;
+    transition: .2s;
+  }
+
+  .skill-card:hover {
+    background: var(--surface-hover);
+    border-color: #555;
+    transform: translateY(-3px);
+  }
+
+  .number, .category {
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  .skill-card h3 {
+    font: 600 21px var(--font-heading);
+    margin-block: 25px 8px;
+  }
+
+  @media (max-width: 640px) {
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    .skill-card { padding: 18px; }
+  }
+</style>

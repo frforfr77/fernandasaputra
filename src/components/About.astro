@@ -1,0 +1,144 @@
+
+<section id="about" class="section">
+  <div class="container about-grid">
+
+    <!-- FOTO PROFIL -->
+    <div class="profile-image">
+      <img
+        src="/images/profile.jpg"
+        alt="Foto profil saya"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- DESKRIPSI -->
+    <div class="about-content">
+      <p class="section-label">01 / TENTANG SAYA</p>
+
+      <h2 class="section-title">
+        Sedikit tentang perjalanan saya.
+      </h2>
+
+      <p>
+        Saya adalah seorang pengembang pemula yang memiliki
+        ketertarikan besar terhadap dunia teknologi dan
+        pengembangan website.
+      </p>
+
+      <p>
+        Saya menikmati proses mempelajari bagaimana sebuah
+        website dibangun, mulai dari struktur, desain,
+        interaksi, hingga pengalaman pengguna.
+      </p>
+
+      <p>
+        Bagi saya, setiap proyek adalah kesempatan untuk
+        bereksperimen, memecahkan masalah, dan berkembang.
+      </p>
+
+      <div class="about-meta">
+        <div>
+          <span>FOKUS</span>
+          <strong>Frontend Development</strong>
+        </div>
+
+        <div>
+          <span>LOKASI</span>
+          <strong>Indonesia</strong>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 75px;
+  }
+
+  .profile-image {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+  }
+
+  .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(20%);
+    transition: transform .5s, filter .5s;
+  }
+
+  .profile-image:hover img {
+    transform: scale(1.04);
+    filter: grayscale(0%);
+  }
+
+  .image-caption {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    padding: 8px 12px;
+    background: rgb(11 11 12 / 80%);
+    color: white;
+    font-size: 10px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+  }
+
+  .section-title {
+    margin-top: 22px;
+    margin-bottom: 28px;
+  }
+
+  .about-content p:not(.section-label) {
+    color: var(--muted);
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+  .about-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-top: 1px solid var(--line);
+    margin-top: 35px;
+    padding-top: 25px;
+  }
+
+  .about-meta div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .about-meta span {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  .about-meta strong {
+    font-size: 13px;
+  }
+
+  @media (max-width: 700px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+
+    .profile-image {
+      max-width: 380px;
+    }
+  }
+</style>

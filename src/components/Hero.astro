@@ -1,0 +1,139 @@
+
+<section class="hero container">
+  <div class="hero-content">
+    <div class="availability">
+      <span class="dot"></span>
+      Sedang belajar dan membangun sesuatu
+    </div>
+
+    <p class="eyebrow">HALO, SAYA WEB DEV</p>
+
+    <h1>
+      Mempelajari
+      <span>yang berarti.</span>
+    </h1>
+
+    <p class="description">
+      Saya seorang pengembang yang tertarik pada teknologi web,
+      desain antarmuka, dan pengembangan produk digital.
+      Saat ini saya terus belajar dan mengembangkan kemampuan
+      melalui proyek nyata.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#projects" class="primary-btn">Lihat proyek saya ↗</a>
+      <a href="#about" class="secondary-btn">Kenali saya</a>
+    </div>
+  </div>
+
+  <div class="hero-bottom">
+    <span>BERBASIS DI KOTAWARINGIN TIMUR, INDONESIA</span>
+    <span>FRONTEND DEVELOPMENT · WEB TECHNOLOGY · IT ANTHUSIAST</span>
+    <span>SCROLL UNTUK MENJELAJAHI ↓</span>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 680px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  .hero-content { max-width: 790px; }
+
+  .availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 12px;
+    padding: 8px 13px;
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    margin-bottom: 42px;
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font: 600 clamp(48px, 8vw, 88px)/1.08 var(--font-heading);
+    letter-spacing: -5px;
+    max-width: 850px;
+  }
+
+  h1 span {
+    color: var(--muted);
+    display: block;
+  }
+
+  .description {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 540px;
+    margin-top: 28px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 34px;
+    flex-wrap: wrap;
+  }
+
+  .primary-btn, .secondary-btn {
+    padding: 13px 19px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .2s;
+  }
+
+  .primary-btn {
+    background: var(--accent);
+    color: #111;
+  }
+
+  .primary-btn:hover { background: #bef264; }
+
+  .secondary-btn {
+    border: 1px solid var(--line);
+  }
+
+  .secondary-btn:hover { background: var(--surface-hover); }
+
+  .hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 100px;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 640px) {
+    .hero { min-height: 620px; padding-top: 80px; }
+    h1 { letter-spacing: -3px; }
+    .hero-bottom { padding-top: 70px; }
+  }
+</style>

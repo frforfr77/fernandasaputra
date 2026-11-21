@@ -1,0 +1,69 @@
+
+<header class="navbar">
+  <nav class="container nav-inner">
+    <a href="#" class="logo">Fernanda<span>.</span></a>
+
+    <div class="nav-links">
+      <a href="#about">Tentang</a>
+      <a href="#skills">Keahlian</a>
+      <a href="#projects">Proyek</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+    <a href="#contact" class="nav-cta">Hubungi saya ↗</a>
+  </nav>
+</header>
+
+<style>
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgb(11 11 12 / 85%);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-inner {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font: 700 25px var(--font-heading);
+    letter-spacing: -2px;
+  }
+
+  .logo span { color: var(--accent); }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+  }
+
+  .nav-links a, .nav-cta {
+    font-size: 13px;
+    color: var(--muted);
+    transition: color .2s;
+  }
+
+  .nav-links a:hover, .nav-cta:hover {
+    color: var(--accent);
+  }
+
+  .nav-cta {
+    color: var(--text);
+    border: 1px solid var(--line);
+    padding: 10px 16px;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 640px) {
+    .nav-inner { height: 68px; }
+    .nav-links { gap: 14px; }
+    .nav-links a { font-size: 11px; }
+    .nav-cta { display: none; }
+  }
+</style>

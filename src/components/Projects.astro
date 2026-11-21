@@ -1,0 +1,159 @@
+
+---
+const projects = [
+  {
+    number: "01",
+    name: "Personal Portfolio",
+    description: "Website portfolio untuk memperkenalkan profil, kemampuan, dan perjalanan pengembangan web.",
+    tags: ["Astro", "TypeScript", "CSS"],
+    status: "Sedang dikembangkan",
+    link: "#"
+  },
+  {
+    number: "02",
+    name: "Web Application",
+    description: "Eksplorasi pembuatan aplikasi web dengan antarmuka modern dan pengalaman pengguna yang intuitif.",
+    tags: ["JavaScript", "CSS"],
+    status: "Segera hadir",
+    link: "#"
+  },
+  {
+    number: "03",
+    name: "Eksperimen Digital",
+    description: "Kumpulan eksperimen kecil untuk mempelajari teknologi dan teknik pengembangan web.",
+    tags: ["Frontend", "Web Design"],
+    status: "Segera hadir",
+    link: "#"
+  }
+];
+---
+
+<section id="projects" class="section">
+  <div class="container">
+    <div class="projects-heading">
+      <div>
+        <p class="section-label">03 / PROYEK PILIHAN</p>
+        <h2 class="section-title">Beberapa hal yang saya bangun.</h2>
+      </div>
+      <span class="project-count">03 PROYEK</span>
+    </div>
+
+    <div class="projects-list">
+      {projects.map((project) => (
+        <a href={project.link} class="project-card">
+          <span class="project-number">{project.number}</span>
+
+          <div class="project-info">
+            <div class="project-title">
+              <h3>{project.name}</h3>
+              <span>↗</span>
+            </div>
+
+            <p>{project.description}</p>
+
+            <div class="tags">
+              {project.tags.map((tag) => (
+                <span>{tag}</span>
+              ))}
+            </div>
+          </div>
+
+          <span class="project-status">{project.status}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .section-title { margin-top: 22px; }
+
+  .project-count {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .projects-list {
+    margin-top: 45px;
+    border-top: 1px solid var(--line);
+  }
+
+  .project-card {
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    gap: 25px;
+    padding: 32px 20px;
+    border-bottom: 1px solid var(--line);
+    transition: background .2s;
+  }
+
+  .project-card:hover { background: var(--surface); }
+
+  .project-number, .project-status {
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  .project-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .project-title h3 {
+    font: 600 24px var(--font-heading);
+  }
+
+  .project-title span {
+    color: var(--accent);
+    opacity: 0;
+    transition: opacity .2s;
+  }
+
+  .project-card:hover .project-title span { opacity: 1; }
+
+  .project-info p {
+    color: var(--muted);
+    font-size: 13px;
+    max-width: 520px;
+    margin-top: 10px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 17px;
+  }
+
+  .tags span {
+    border: 1px solid var(--line);
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: var(--muted);
+    font-size: 10px;
+  }
+
+  @media (max-width: 640px) {
+    .project-card {
+      grid-template-columns: 30px 1fr;
+      gap: 12px;
+      padding: 25px 8px;
+    }
+
+    .project-status {
+      grid-column: 2;
+    }
+
+    .project-title h3 { font-size: 20px; }
+    .project-count { display: none; }
+  }
+</style>
